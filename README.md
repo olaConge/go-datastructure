@@ -1,2 +1,2 @@
-# go-collection
-Go语言实现的各种集合
+# go-datastructure
+Go语言实现常用数据结构
