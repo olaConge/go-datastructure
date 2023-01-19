@@ -9,7 +9,7 @@ import (
 
 var _ List[any] = new(ArrayList[any])
 
-// ArrayList consists of the following members:
+// ArrayList contains the following members:
 // elements: a slice store elements of Type T
 // size: how many elements there are
 // equals: a function used to justify whether elements are equal
@@ -24,10 +24,9 @@ const (
 	shrinkFactor = float32(0.25)
 )
 
-func New[T any](equals utils.EqualsFn[T], values ...T) *ArrayList[T] {
+func NewArrayList[T any](equals utils.EqualsFn[T], values ...T) *ArrayList[T] {
 	list := &ArrayList[T]{
 		equals: equals,
-		size:   0,
 	}
 	if len(values) > 0 {
 		list.Add(values...)
