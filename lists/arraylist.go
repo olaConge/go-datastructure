@@ -2,12 +2,13 @@ package lists
 
 import (
 	"fmt"
+	"github.com/olaConge/go-datastructure/collections"
 	"github.com/olaConge/go-datastructure/errors"
 	"github.com/olaConge/go-datastructure/utils"
 	"strings"
 )
 
-var _ List[any] = new(ArrayList[any])
+var _ collections.List[any] = new(ArrayList[any])
 
 // ArrayList contains the following members:
 // elements: a slice store elements of Type T

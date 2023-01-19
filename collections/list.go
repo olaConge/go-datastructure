@@ -1,7 +1,6 @@
-package lists
+package collections
 
 import (
-	"github.com/olaConge/go-datastructure/collections"
 	"github.com/olaConge/go-datastructure/utils"
 )
 
@@ -15,5 +14,5 @@ type List[T any] interface {
 	Sort(comparator utils.Comparator[T])
 	Swap(index1, index2 int) error
 
-	collections.Collection[T]
+	Collection[T]
 }

@@ -2,13 +2,14 @@ package lists
 
 import (
 	"fmt"
+	"github.com/olaConge/go-datastructure/collections"
 	"github.com/olaConge/go-datastructure/errors"
 	"github.com/olaConge/go-datastructure/utils"
 	"strings"
 )
 
 // Assert List implementation
-var _ List[any] = new(LinkedList[any])
+var _ collections.List[any] = new(LinkedList[any])
 
 type LinkedList[T any] struct {
 	first  *node[T]
