@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/olaConge/go-datastructure/lists"
-	"github.com/olaConge/go-datastructure/utils"
+	"github.com/olaConge/go-datastructure/list"
+	"github.com/olaConge/go-datastructure/util"
 )
 
 func main() {
-	l := lists.NewLinkedList[int](utils.Equals[int], 1, 2, 3, 4, 5, 6, 7)
+	l := list.NewLinkedList[int](util.Equals[int], 1, 2, 3, 4, 5, 6, 7)
 	g, _ := l.Get(0)
 	_ = g
 

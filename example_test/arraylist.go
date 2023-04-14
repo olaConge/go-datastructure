@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/olaConge/go-datastructure/lists"
-	"github.com/olaConge/go-datastructure/utils"
+	"github.com/olaConge/go-datastructure/list"
+	"github.com/olaConge/go-datastructure/util"
 )
 
 func main() {
-	l := lists.NewArrayList[int](utils.Equals[int], 1, 2, 3, 4, 5, 6, 7)
+	l := list.NewArrayList[int](util.Equals[int], 1, 2, 3, 4, 5, 6, 7)
 	_, _ = l.Get(0)
 	l.Add(10, 9, 8)
 	l.Sort(func(a, b int) int { return a - b })

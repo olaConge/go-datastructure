@@ -1,10 +1,10 @@
-package lists
+package list
 
 import (
 	"fmt"
 	"github.com/olaConge/go-datastructure/collections"
 	"github.com/olaConge/go-datastructure/errors"
-	"github.com/olaConge/go-datastructure/utils"
+	"github.com/olaConge/go-datastructure/util"
 	"strings"
 )
 
@@ -24,7 +24,7 @@ type node[T any] struct {
 	next  *node[T]
 }
 
-func NewLinkedList[T any](equals utils.EqualsFn[T], values ...T) *LinkedList[T] {
+func NewLinkedList[T any](equals util.EqualsFn[T], values ...T) *LinkedList[T] {
 	list := &LinkedList[T]{
 		equals: equals,
 	}
@@ -199,13 +199,13 @@ func (list *LinkedList[T]) Insert(index int, values ...T) error {
 }
 
 // Sort sorts values (in-place) using.
-func (list *LinkedList[T]) Sort(comparator utils.Comparator[T]) {
+func (list *LinkedList[T]) Sort(comparator util.Comparator[T]) {
 	if list.size < 2 {
 		return
 	}
 
 	values := list.Values()
-	utils.Sort(values, comparator)
+	util.Sort(values, comparator)
 
 	list.Clear()
 

@@ -1,10 +1,10 @@
-package lists
+package list
 
 import (
 	"fmt"
 	"github.com/olaConge/go-datastructure/collections"
 	"github.com/olaConge/go-datastructure/errors"
-	"github.com/olaConge/go-datastructure/utils"
+	"github.com/olaConge/go-datastructure/util"
 	"strings"
 )
 
@@ -25,7 +25,7 @@ const (
 	shrinkFactor = float32(0.25)
 )
 
-func NewArrayList[T any](equals utils.EqualsFn[T], values ...T) *ArrayList[T] {
+func NewArrayList[T any](equals util.EqualsFn[T], values ...T) *ArrayList[T] {
 	list := &ArrayList[T]{
 		equals: equals,
 	}
@@ -112,11 +112,11 @@ func (list *ArrayList[T]) Insert(index int, values ...T) error {
 }
 
 // Sort sorts values (in-place) using.
-func (list *ArrayList[T]) Sort(comparator utils.Comparator[T]) {
+func (list *ArrayList[T]) Sort(comparator util.Comparator[T]) {
 	if len(list.elements) < 2 {
 		return
 	}
-	utils.Sort(list.elements[:list.size], comparator)
+	util.Sort(list.elements[:list.size], comparator)
 }
 
 // Swap swaps the two elements in index1 and index2

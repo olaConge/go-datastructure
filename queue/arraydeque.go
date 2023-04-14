@@ -1,18 +1,18 @@
-package queues
+package queue
 
 import (
 	"fmt"
 	"github.com/olaConge/go-datastructure/collections"
-	"github.com/olaConge/go-datastructure/lists"
+	"github.com/olaConge/go-datastructure/list"
 	"strings"
 )
 
 type ArrayDeque[T any] struct {
-	list *lists.ArrayList[T]
+	list *list.ArrayList[T]
 }
 
 func NewArrayDeque[T any]() *ArrayDeque[T] {
-	return &ArrayDeque[T]{list: lists.NewArrayList[T](nil)}
+	return &ArrayDeque[T]{list: list.NewArrayList[T](nil)}
 }
 
 var _ collections.Deque[any] = new(ArrayDeque[any])

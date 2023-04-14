@@ -1,4 +1,4 @@
-package utils
+package util
 
 type Comparator[T any] func(a, b T) int
 

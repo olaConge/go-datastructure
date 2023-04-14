@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/olaConge/go-datastructure/queues"
+	"github.com/olaConge/go-datastructure/queue"
 )
 
 func main() {
-	q := queues.NewArrayDeque[int]()
+	q := queue.NewArrayDeque[int]()
 	q.Offer(1)
 	q.OfferLast(2)
 	q.OfferFirst(3)
